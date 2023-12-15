@@ -108,7 +108,7 @@ int inputIntRange(int min, int max)
 }
 
 //get character input from user
-int inputCharOption(const char *strng)
+char inputCharOption(const char *strng)
 {
     int i, noOfCharacters = 0;
     char tempCharacter, newLineChar;
@@ -173,13 +173,10 @@ void displayFormattedPhone(const char *phone_number)
     int i;
     int allNumbers = 1;//checking if character is number (using ascii value), initially it is supposed that all characters are number, ie. allNumbers=1;
     int noOfCharacters = 0;//variable to store number of characters in string
-    int asciiValueOfCharacter = 0;// varibale to store ascii value of character
     if (phone_number != NULL)
     {
-        while (phone_number[noOfCharacters] != '\0')
-        {
-            asciiValueOfCharacter = (int)phone_number[noOfCharacters];//converting character to string
-            if (asciiValueOfCharacter < 48 || asciiValueOfCharacter > 57)//checking if character is number or not by checking ascii value(48 ~= 0; 57 ~= 9)
+        while(phone_number[noOfCharacters]!='\0'){
+            if (phone_number[noOfCharacters] <='0' || phone_number[noOfCharacters] >='9')//checking if character is number or not
             {
                 allNumbers = 0;//If character is not number allNumbers will be 0, that means string consists non-numeric character
             }

@@ -20,7 +20,7 @@ int inputIntPositive(void);
 int inputIntRange(int min, int max);
 
 //get character input from user
-int inputCharOption(const char *strng);
+char inputCharOption(const char *strng);
 
 //get string input from user
 void inputCString(char *strng, int min, int max);
