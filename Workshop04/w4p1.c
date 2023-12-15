@@ -16,72 +16,69 @@ a clear violation of Seneca's Academic Integrity!
 
 int main(void)
 {
-    char loop;
-    int number, a = 0;
+    char loopType;
+    int num,i=0;
     printf("+----------------------+\n");
     printf("Loop application STARTED\n");
-    printf("+----------------------+");
-    printf("\n\n");
+    printf("+----------------------+\n\n");
     do {
         printf("D = do/while | W = while | F = for | Q = quit\n");
-        printf("Enter loop type and the numberber of times to iterate (Quit=Q0): ");
-        scanf(" %c%d", &loop, &number);
-        if (loop == 'D') {
-            if (number >= 3 && number <= 20) {
-                a = 0;
+        printf("Enter loop type and the number of times to iterate (Quit=Q0): ");
+        scanf(" %c%d", &loopType, &num);
+        if (loopType == 'D') {
+            if (num >= 3 && num <= 20) {
+                i = 0;
                 printf("DO-WHILE: ");
                 do {
                     printf("D");
-                    a=a+1;
-                } while (a < number);
+                    i++;
+                } while (i < num);
                 printf("\n\n");
             }
             else {
-                printf("ERROR: The numberber of iterations must be between 3-20 inclusive!\n\n");
+                printf("ERROR: The number of iterations must be between 3-20 inclusive!\n\n");
             }
         }
-        else if (loop == 'W') {
-            if (number >= 3 && number <= 20) {
-                a = 0;
+        else if (loopType == 'W') {
+            if (num >= 3 && num <= 20) {
+                i = 0;
                 printf("WHILE   : ");
-                while (a < number) {
+                while (i < num) {
                     printf("W");
-                    a=a+1;
+                    i++;
                 }
                 printf("\n\n");
             }
             else {
-                printf("ERROR: The numberber of iterations must be between 3-20 inclusive!\n\n");
+                printf("ERROR: The number of iterations must be between 3-20 inclusive!\n\n");
             }
         }
-        else if (loop == 'F') {
-            if (number >= 3 && number <= 20) {
+        else if (loopType == 'F') {
+            if (num >= 3 && num <= 20) {
                 printf("FOR     : ");
-                for (a = 0; a < number; a++) {
+                for (i = 0; i < num; i++) {
                     printf("F");
                 }
                 printf("\n\n");
             }
             else {
-                printf("ERROR: The numberber of iterations must be between 3-20 inclusive!");
+                printf("ERROR: The number of iterations must be between 3-20 inclusive!");
                 printf("\n\n");
             }
         }
-        else if (loop == 'Q') {
-            if (!number == 0) {
-                printf("ERROR: To quit, the numberber of iterations should be 0!\n\n");
-            }
-            else {
-                printf("\n+--------------------+");
-                printf("\n");
-                printf("Loop application ENDED\n");
-                printf("+--------------------+\n");
+        else if (loopType == 'Q') {
+            if (!num == 0) {
+                printf("ERROR: To quit, the number of iterations should be 0!\n\n");
             }
         }
         else {
             printf("ERROR: Invalid entered value(s)!\n\n");
         }
-
-    } while (!(loop == 'Q' && number == 0));
+        
+    } while (!(loopType=='Q'&&num==0));
+    printf("\n+--------------------+");
+    printf("\n");
+    printf("Loop application ENDED\n");
+    printf("+--------------------+\n");
     return 0;
 }

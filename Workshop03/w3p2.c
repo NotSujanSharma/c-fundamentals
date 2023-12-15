@@ -24,7 +24,6 @@ int main(void)
     int coffeeWeight1, coffeeWeight2, coffeeWeight3;
     int totalServings;
     
-
     printf("Take a Break - Coffee Shop");
     printf("\n==========================");
     printf("\n\nEnter the coffee product information being sold today...");
@@ -134,4 +133,3 @@ int main(void)
 
     return 0;
 }
-

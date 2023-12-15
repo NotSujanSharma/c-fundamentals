@@ -1,7 +1,7 @@
 /*/////////////////////////////////////////////////////////////////////////
-                                                  Workshop - #2 (P2)
+												  Workshop - #2 (P2)
 
-                                                  DISCLAIMER
+												  DISCLAIMER
 
 This Work is only for educational purpose, any student who comes across this
 work is not permitted to copy this work. AGAIN Any student who comes across these
@@ -11,12 +11,13 @@ a clear violation of Seneca's Academic Integrity!
 /////////////////////////////////////////////////////////////////////////*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-int main(void) {
+int main(void)
+{
 	double smallShirt, mediumShirt, largeShirt, average;
 	const double TAX = 0.13;
 	const char patSize = 'S', salSize = 'M', tomSize = 'L';
 	int patShirts, patSubTotal, patTotal, patTaxes;
-	int ssCent, msCent, lsCent, total, subTotal,totalTaxes;
+	int ssCent, msCent, lsCent, total, subTotal, totalTaxes;
 	int toonies, loonies, quaters, dimes, nickels, pennies, balance;
 	int sallyShirts, sallySubTotal, sallyTaxes, sallyTotal;
 	int tommyShirts, tommySubTotal, tommyTaxes, tommyTotal;
@@ -39,29 +40,27 @@ int main(void) {
 	printf("\nPatty's shirt size is '%c'\n", patSize);
 	printf("Number of shirts Patty is buying: ");
 	scanf("%d", &patShirts);
-	printf("\nPatty's shirt size is '%c'\n", tomSize);
-	printf("Number of shirts Patty is buying: ");
+	printf("\nTommy's shirt size is '%c'\n", tomSize);
+	printf("Number of shirts Tommy is buying: ");
 	scanf("%d", &tommyShirts);
-	printf("\nPatty's shirt size is '%c'\n", salSize);
-	printf("Number of shirts Patty is buying: ");
+	printf("\nSally's shirt size is '%c'\n", salSize);
+	printf("Number of shirts Sally is buying: ");
 	scanf("%d", &sallyShirts);
 	printf("\nCustomer Size Price Qty Sub-Total       Tax     Total\n");
 	printf("-------- ---- ----- --- --------- --------- ---------\n");
 	patSubTotal = ssCent * patShirts;
 	patTaxes = (TAX * patSubTotal);
-	patTaxes = patTaxes + 1; //rounding
+	patTaxes = patTaxes + 1; // rounding
 	patTotal = patSubTotal + patTaxes;
-	printf("Patty    %-4c %5.2lf %3d %9.4lf %9.4lf %9.4lf\n", patSize, ssCent / 100.0f, patShirts,patSubTotal/100.0f,patTaxes/100.0f,patTotal/100.0f );
-
+	printf("Patty    %-4c %5.2lf %3d %9.4lf %9.4lf %9.4lf\n", patSize, ssCent / 100.0f, patShirts, patSubTotal / 100.0f, patTaxes / 100.0f, patTotal / 100.0f);
 	sallySubTotal = msCent * sallyShirts;
 	sallyTaxes = (TAX * sallySubTotal);
-	sallyTaxes = sallyTaxes + 1; //rounding
+	sallyTaxes = sallyTaxes + 1; // rounding
 	sallyTotal = sallySubTotal + sallyTaxes;
 	printf("Sally    %-4c %5.2lf %3d %9.4lf %9.4lf %9.4lf\n", salSize, msCent / 100.0f, sallyShirts, sallySubTotal / 100.0f, sallyTaxes / 100.0f, sallyTotal / 100.0f);
-
 	tommySubTotal = lsCent * tommyShirts;
 	tommyTaxes = (TAX * tommySubTotal);
-	tommyTaxes = tommyTaxes + 1; //rounding
+	tommyTaxes = tommyTaxes + 1; // rounding
 	tommyTotal = tommySubTotal + tommyTaxes;
 	printf("Tommy    %-4c %5.2lf %3d %9.4lf %9.4lf %9.4lf\n", tomSize, lsCent / 100.0f, tommyShirts, tommySubTotal / 100.0f, tommyTaxes / 100.0f, tommyTotal / 100.0f);
 	printf("-------- ---- ----- --- --------- --------- ---------\n");
@@ -78,28 +77,26 @@ int main(void) {
 	printf("%22.4lf\n", balance / 100.0f);
 	toonies = balance / 200;
 	balance = balance % 200;
-	printf("Toonies  %3d %9.4lf\n", toonies, balance/100.0f);
+	printf("Toonies  %3d %9.4lf\n", toonies, balance / 100.0f);
 	loonies = balance / 100.0f;
 	balance = balance % 100;
 	printf("Loonies  %3d %9.4lf\n", loonies, balance / 100.0f);
 	quaters = balance / 25.0f;
 	balance = balance % 25;
-	printf("Quaters  %3d %9.4lf\n", quaters, balance / 100.0f);
+	printf("Quarters %3d %9.4lf\n", quaters, balance / 100.0f);
 	dimes = balance / 10.0f;
 	balance = balance % 10;
 	printf("Dimes  %5d %9.4lf\n", dimes, balance / 100.0f);
 	nickels = balance / 5.0f;
 	balance = balance % 5;
-	printf("Nickles  %3d %9.4lf\n", nickels, balance / 100.0f);
+	printf("Nickels  %3d %9.4lf\n", nickels, balance / 100.0f);
 	pennies = balance / 1.0f;
 	balance = balance % 1;
 	printf("Pennies  %3d %9.4lf\n\n", pennies, balance / 100.0f);
 	average = (double)subTotal / (patShirts + sallyShirts + tommyShirts);
-	printf("Average cost/shirt: $%.4lf\n\n",average/100);
-
-
+	printf("Average cost/shirt: $%.4lf\n\n", average / 100);
 	printf("Sales INCLUDING tax\n");
-	printf("Coin     Qty   Balance\n--------- --- ---------\n");
+	printf("Coin     Qty   Balance\n-------- --- ---------\n");
 	balance = total;
 	printf("%22.4lf\n", balance / 100.0f);
 	toonies = balance / 200;
@@ -110,13 +107,13 @@ int main(void) {
 	printf("Loonies  %3d %9.4lf\n", loonies, balance / 100.0f);
 	quaters = balance / 25.0f;
 	balance = balance % 25;
-	printf("Quaters  %3d %9.4lf\n", quaters, balance / 100.0f);
+	printf("Quarters %3d %9.4lf\n", quaters, balance / 100.0f);
 	dimes = balance / 10.0f;
 	balance = balance % 10;
 	printf("Dimes  %5d %9.4lf\n", dimes, balance / 100.0f);
 	nickels = balance / 5.0f;
 	balance = balance % 5;
-	printf("Nickles  %3d %9.4lf\n", nickels, balance / 100.0f);
+	printf("Nickels  %3d %9.4lf\n", nickels, balance / 100.0f);
 	pennies = balance / 1.0f;
 	balance = balance % 1;
 	printf("Pennies  %3d %9.4lf\n\n", pennies, balance / 100.0f);
