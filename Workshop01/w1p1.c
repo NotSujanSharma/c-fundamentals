@@ -1,3 +1,14 @@
+/*/////////////////////////////////////////////////////////////////////////
+                                                  Workshop - #1 (P1)
+
+                                                  DISCLAIMER
+
+This Work is only for educational purpose, any student who comes across this
+work is not permitted to copy this work. AGAIN Any student who comes across these
+documents is warned NOT TO USE these as their homework as it is plagiarism and
+a clear violation of Seneca's Academic Integrity!
+
+/////////////////////////////////////////////////////////////////////////*/
 #include <stdio.h>
 int main(void) {
 	printf("Workshop 1 Part-1 \n=================\n");
