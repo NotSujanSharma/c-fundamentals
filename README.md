@@ -1,6 +1,6 @@
 # IPC144Works
 My Work of IPC144 - Seneca
-> This Repository is to be uploaded ...
+> This Repository contains all the Workshops and Milestones of IPC144 - Fall 2023.
 
 # DISCLAIMER
 
